@@ -30,7 +30,20 @@ $saleAdmin = $admin->makeSale(66);
     <title>Document</title>
 </head>
 <body>
-
+    <header>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active text-uppercase" aria-current="page" href="#">User</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-uppercase" href="#">Admin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-uppercase" href="#">Product</a>
+        </li>
+    </ul>
+    </header>
+    <main>
  <!-- Calling variables of User Class ($edo->name . ' ' . $edo->surname) --- OR ---- calling the function GetFullName directly from User methods -->
 
                     <h1>Nome Utente: <?php echo $edo->getFullName();   ?></h1>
@@ -38,7 +51,7 @@ $saleAdmin = $admin->makeSale(66);
                     <p> <?php echo 'Hai uno sconto del :' . ' ' . $sale . ' ' . 'su una '. ' ' . $console->name . ' ' . ($console->price - $saleAdmin)?></p>
 
                     <p>Admin Server: <?php echo $admin->authorization . ' & password :' . $admin->password .' '. 'con uno sconto del: '. $saleAdmin?> </p>
-
+    </main>
 
     
 </body>
