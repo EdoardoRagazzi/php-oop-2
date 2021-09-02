@@ -1,19 +1,25 @@
 <?php
 
+//Creating a Class User
 class User {
     public $name;
     public $surname;
-    public $age;
     public $discount;
 
-    function __construct($_name,$_surname,$_age,$_discount){
+    function __construct($_name,$_surname,$_discount){
         $this->name = $_name;
         $this->surname = $_surname;
-        $this->age = $_age;
         $this->discount = $_discount;
     }
     public function getFullName(){  
         return  $this->name . ' ' . $this->surname;
+    }
+
+    public function makeSale( $age ){
+        if( $age > 65 ){
+            $this->discount = 40;
+        }
+        return $this->discount;
     }
 }
 

@@ -1,14 +1,13 @@
 <?php
 
+//Include the file User.php 
 require_once 'User.php';
 
-$edo = new User('Edo','Ragazzi',28,'20%');
-
+$edo = new User('Edo','Ragazzi',0);
+$edo->makeSale(70);
+$sale = $edo->makeSale(70);
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +23,8 @@ $edo = new User('Edo','Ragazzi',28,'20%');
 
  <!-- Calling variables of User Class ($edo->name . ' ' . $edo->surname) --- OR ---- calling the function GetFullName directly from User methods -->
 
-                    <h1><?php echo $edo->getFullName();   ?></h1>
+                    <h1>Nome Utente:<?php echo $edo->getFullName();   ?></h1>
+                    <p><?php echo 'Hai uno sconto del :' . ' ' . $sale ?></p>
     
 </body>
 </html>
