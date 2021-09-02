@@ -1,6 +1,8 @@
 <?php
 
+require_once 'User.php';
 
+$edo = new User('Edo','Ragazzi',28,'20%');
 
 
 ?>
@@ -19,6 +21,8 @@
     <title>Document</title>
 </head>
 <body>
+
+<h1><?php echo   $edo->name . ' ' . $edo->surname  ?></h1>
     
 </body>
 </html>
