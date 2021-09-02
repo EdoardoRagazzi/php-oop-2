@@ -12,6 +12,9 @@ class User {
         $this->age = $_age;
         $this->discount = $_discount;
     }
+    public function getFullName(){  
+        return  $this->name . ' ' . $this->surname;
+    }
 }
 
 //It's not essential  to close php

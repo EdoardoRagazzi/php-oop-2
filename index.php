@@ -22,7 +22,9 @@ $edo = new User('Edo','Ragazzi',28,'20%');
 </head>
 <body>
 
-<h1><?php echo   $edo->name . ' ' . $edo->surname  ?></h1>
+ <!-- Calling variables of User Class ($edo->name . ' ' . $edo->surname) --- OR ---- calling the function GetFullName directly from User methods -->
+
+                    <h1><?php echo $edo->getFullName();   ?></h1>
     
 </body>
 </html>
